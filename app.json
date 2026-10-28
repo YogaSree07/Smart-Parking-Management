@@ -1,22 +1,49 @@
 {
   "expo": {
-    "name": "Smart-Parking-Management",
-    "slug": "Smart-Parking-Management",
+    "name": "Smart Parking Management",
+    "slug": "smart-parking-management",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1E3A8A"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.smartparking.management"
     },
     "android": {
+      "package": "com.smartparking.management",
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#1E3A8A",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA"
+      ]
     },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow Smart Parking Management to access your location to show nearby parking facilities."
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Smart Parking Management to access camera to verify booking QR codes."
+        }
+      ],
+      "expo-font"
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
     }
